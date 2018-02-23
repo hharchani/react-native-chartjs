@@ -65,6 +65,7 @@ export default class Chart extends Component {
 						}
 					}
 					scalesPageToFit = { true }
+					{...this.props.webViewProps}
 				/>	
 		)
 	}
