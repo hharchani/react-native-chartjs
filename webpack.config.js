@@ -10,14 +10,6 @@ module.exports = {
         path : path.join(__dirname, 'dist'),
         filename : '[name].bundle.js'
     },
-    resolve : {
-        alias : {
-            myChart : 'Chart.bundle.min.js'
-        },
-        modules: [
-            path.resolve(__dirname, './web/lib')
-        ]
-    },
     plugins : [
         new HtmlWebpackPlugin({
             template : './web/chart.html',

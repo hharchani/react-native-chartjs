@@ -4,6 +4,9 @@
   "description": "use chart.js library in react native",
   "main": "index.js",
   "scripts": {
+    "start": "npm run watch",
+    "build": "webpack",
+    "watch": "webpack -d --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,5 +22,12 @@
   "bugs": {
     "url": "https://github.com/KittyCookie/react-native-chartjs/issues"
   },
-  "homepage": "https://github.com/KittyCookie/react-native-chartjs#readme"
+  "homepage": "https://github.com/KittyCookie/react-native-chartjs#readme",
+  "devDependencies": {
+    "chart.js": "^2.7.2",
+    "html-webpack-inline-source-plugin": "0.0.9",
+    "html-webpack-plugin": "^3.0.4",
+    "webpack": "^4.0.1",
+    "webpack-cli": "^2.0.10"
+  }
 }
