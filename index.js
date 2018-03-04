@@ -11,10 +11,6 @@ import PropTypes from 'prop-types';
  * @type {[string]}
  */
 var getSettingChartScript = (chartConfiguration, defaultFontSize = 12) => (`
-	var myChart;
-	if (myChart) {
-		myChart.destroy();
-	}
 	Chart.defaults.global.defaultFontSize=${defaultFontSize};
 	var ctx = document.getElementById("myChart").getContext('2d');
 	myChart = new Chart( ctx, ${JSON.stringify( chartConfiguration )} );
