@@ -3,7 +3,8 @@ import React, {
 } from 'react';
 import {
 	WebView,
-	StyleSheet
+	StyleSheet,
+	Platform,
 } from 'react-native';
 import PropTypes from 'prop-types';
 /**
@@ -48,6 +49,7 @@ export default class Chart extends Component {
 	}
 
 	render() {
+		const path = Platform.OS === 'ios' ? require('./dist/index.html') : {uri: 'file:///android_asset/chartjs/index.html'}
 		return ( 
 			<WebView 
 				style={{ 
@@ -60,9 +62,7 @@ export default class Chart extends Component {
 				injectedJavaScript={
 					getSettingChartScript( this.props.chartConfiguration, this.props.defaultFontSize)
 				}
-				source = {
-					require('./dist/index.html')
-				}
+				source = {path}
 				onError = {
 					(error) => {
 						console.log(error)
