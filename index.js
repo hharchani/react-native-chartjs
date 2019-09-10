@@ -2,10 +2,10 @@ import React, {
 	Component,
 } from 'react';
 import {
-	WebView,
 	StyleSheet,
 	Platform,
 } from 'react-native';
+import { WebView } from 'react-native-webview';
 import PropTypes from 'prop-types';
 /**
  * 渲染图表脚本的模版，设置时将CONFIG参数替换成对应的值
