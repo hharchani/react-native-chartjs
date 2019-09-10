@@ -29,5 +29,8 @@
     "html-webpack-plugin": "^3.0.4",
     "webpack": "^4.0.1",
     "webpack-cli": "^2.0.10"
+  },
+  "dependencies": {
+    "react-native-webview": "^7.0.5"
   }
 }
